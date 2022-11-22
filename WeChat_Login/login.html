@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>游戏扫码登录</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<meta name="keywords" content="扫码登录,免密扫码登录,游戏扫码登录,王者扫码登录,王者荣耀扫码登录,扫码登录源码">
+<meta name="description" content="扫码登录,免密扫码登录,游戏扫码登录,王者扫码登录,王者荣耀扫码登录,扫码登录源码">
+<meta name="author" content="Liuless丨QQ: 1276117137">
+<link href="https://www.speed-v.com/favicon.ico" rel="icon" type="image/ico">
+<link href="https://api-auth.speed-idc.com/cdn/css/bootstrap.min-3.3.7.css" rel="stylesheet">
+<link href="https://api-auth.speed-idc.com/cdn/css/weui.min-1.1.2.css" rel="stylesheet">
+<script src="https://api-auth.speed-idc.com/cdn/js/jquery.min-2.1.1.js"></script>
+<script src="https://api-auth.speed-idc.com/cdn/js/bootstrap.min-3.3.7.js"></script>
+<style>.auth_msg_wrp,body,html{position:relative;height:100%}body{background-color:#F3F3F3}ul{list-style:none}.auth_msg_wrp{font-size:0;text-align:center}.auth_msg_wrp:after{content:" ";width:0;height:100%;vertical-align:middle;display:inline-block}.auth_msg{padding:0 30px;text-align:center;font-size:16px;display:inline-block;vertical-align:middle;margin-top:-11%}.auth_global_tips{font-size:21px;font-weight:700}.auth_qrcode{width:180px;height:180px;vertical-align:top;margin:10px 0 4px}.auth_nickname{font-weight:400;width:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;display:block}.auth_msg_bd{margin-top:90px;color:#B6B6B6;padding-top:15px;position:relative}.auth_msg_bd:before{content:" ";position:absolute;left:0;top:0;right:0;height:1px;border-top:1px solid rgba(0,0,0,.1);-webkit-transform-origin:0 0;transform-origin:0 0;-webkit-transform:scaleY(.5);transform:scaleY(.5)}.auth_rights_tips{margin-bottom:4px}.auth_msg_ft{margin-top:10px}.auth_msg_ft_link{color:#607fa6}.auth_msg_ft_link:after{vertical-align:middle;margin-left:4px;display:inline-block;transform:matrix(.71,.71,-.71,.71,0,0);-ms-transform:matrix(.71,.71,-.71,.71,0,0);-webkit-transform:matrix(.71,.71,-.71,.71,0,0);height:6px;width:6px;border-width:1px 1px 0 0;border-color:currentColor;border-style:solid;position:relative;top:-2px;top:-1px}.weui-msg{padding-top:130px}.auth_avatar{width:90px;height:90px}.weui-msg__title{line-height:2}@media only screen and (orientation:landscape){.auth_msg{margin-top:-3%}}body{background-color:#F3F3F3;}.auth_msg_wrp{height:300px}.zhegai{width:100%;height:auto;max-width:800px;margin-left:auto;margin-right:auto;display:block;}.tit1{background-color:#ffffff;margin-left:20px;margin-right:20px;margin-bottom:20px;height:auto;width:auto;display:block;padding:25px;border-radius:10px;}.auth_msg{font-size:0px;}.auth_msg_wrp:after{height:0px;}.auth_msg{margin-top:30px;}.auth_msg_bd{margin-top:0px;}.weui-msg{padding-top:55px}.icomtitle{width:10px;background-color:#000000;height:16px;display:inline-block;}.title{font-size:18px;color:#000000;font-weight:900;display:block;margin-top:0px;}.ms{color:#616264;font-weight:normal;font-size:14px;margin-top:20px;display:block;}.tit2{background-color:#F3F3F3;margin-left:20px;margin-right:20px;margin-bottom:20px;height:auto;width:auto;display:block;padding:25px;border-radius:10px;}.back{background-color:#000000;color:ffffff;margin-left:20px;margin-right:20px;height:50px;line-height:50px;width:auto;display:block;border-radius:10px;text-decoration:none;text-align:center;}.gz{font-size:16px;line-height:20px;color:#000000;font-weight:900;display:block;margin-top:0px;text-align:center;}</style>
+</head>
+<body>
+<div id="AuthUI">
+<form action="" method="get">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title">演示功能下方生成授权或输入：SpeedApp</h4>
+<div id="hidden"></div>
+</div>
+<div class="modal-body">
+<div class="form-group">
+<label for="recipient-name" class="control-label">输入授权码解锁功能：<a id="AuthState"></a></label>
+<input type="text" class="form-control" name="SpeedCode">
+</div>
+</div>
+<div class="modal-footer">
+<a class="btn btn-default" href="https://apps.v-team.cn/User/">生成授权码（账号密码：Liuless）</a>
+<button type="submit" class="btn btn-primary">解锁</button>
+</div>
+</div>
+</div>
+</form>
+</div>
+<div id="AuthLogin">
+<div class="auth_msg_wrp">
+<div class="auth_msg">
+<p class="auth_global_tips" id="game_msg">扫码登录正在加载中...</p>
+<p id="game_qr"></p>
+</div>
+</div>
+<div class="tit1">
+<p class="gz">出售此源码 源码纯静态HTML页面<br>作者QQ：1276117137</p>
+</div>
+<div class="tit1">
+<p class="title">注意事项</p> 
+<p class="ms">上号者：请使用 Safari浏览器 打开本页面截图将二维码发给号主，其它浏览器将无法跳转游戏；</p> 
+<p class="ms">扫码者：打开微信使用“扫一扫”后置摄像头扫码授权，请勿在微信中长按识别；</p>
+<p class="ms">温馨提示：扫码只用于授权登录游戏，不会登录您的微信，请放心使用；</p>
+</div>
+<a class="back" href="/">返回登录其它游戏</a><br>
+</div>
+<script>
+authinfo = '{"msg":"w2.v-team.cn","date":"1953281403","auth":"658b6e4556886cc78f38e18da318cea1fe3461902ec41f8fd012bdbb0cfd231d2ce425dc9d16514425eecd54a98fd134e756b48e9aab46f4bf6575fa32d78e74"}';//系统授权代码
+AuthCode = '';//软件编码 默认对接 208407e3916cbbbb6d7b1c2c
+</script>
+<script src="https://api-auth.speed-idc.com/cdn/js/SpeedGameV1.5-CN.js"></script>
+</body>
+</html>
